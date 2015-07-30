@@ -36,15 +36,15 @@ files:
 #   "permissions" section altogether. A blank or incomplete "permissions"
 #   section may cause associated deployments to fail.
 permissions:
+  - object: /home/ubuntu/raphter/
+    owner: ubuntu
+    mode: 464
   - object: /home/ubuntu/raphter/deploy_hooks
     pattern: "*.sh"
     owner: ubuntu
     mode: 4755
     type:
       - file
-  - object: /home/ubuntu/raphter/
-    owner: ubuntu
-    mode: 464
 # If you are not running any commands on the instance, then remove 
 #   the "hooks" section altogether. A blank or incomplete "hooks" section
 #   may cause associated deployments to fail.
