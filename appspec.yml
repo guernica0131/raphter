@@ -36,19 +36,28 @@ files:
 #   "permissions" section altogether. A blank or incomplete "permissions"
 #   section may cause associated deployments to fail.
 permissions:
-  #- object: /home/ubuntu/raphter/
-  #  owner: ubuntu
-  #  mode: 464
-  - object: /home/ubuntu/raphter/deploy_hooks
-    pattern: "*.sh"
-    owner: root
-    mode: 4755
+  - object: /home/ubuntu/raphter
+    #pattern: "**"
+    owner: ubuntu
+    mode: 464
     type:
-      - file
+      - directory
+  # - object: /home/ubuntu/raphter/deploy_hooks
+  #   pattern: "*.sh"
+  #   owner: root
+  #   mode: 4755
+  #   type:
+  #     - file
 # If you are not running any commands on the instance, then remove 
 #   the "hooks" section altogether. A blank or incomplete "hooks" section
 #   may cause associated deployments to fail.
 hooks:
+  ApplicationStop:
+    - location: deploy_hooks/application_stop.sh
+      runas: ubuntu
+    - location: deploy_hooks/kill_process.sh
+      timeout: 1
+      runas: root
 # For each deployment lifecycle event, specify multiple "location" entries 
 #   if you want to run multiple scripts during that event.
 # You can specify "timeout" as the number of seconds to wait until failing the deployment 
@@ -72,10 +81,10 @@ hooks:
 # During the ApplicationStop deployment lifecycle event, run the commands 
 #   in the script specified in "location" starting from the root of the 
 #   revision's file bundle.
-hooks:
+
  #BeforeInstall:
  #   - location: deploy_hooks/before_install.sh
  #     runas: root
- ApplicationStart:
+  ApplicationStart:
     - location:  deploy_hooks/application_start.sh   
-      runas: root
+      runas: ubuntu

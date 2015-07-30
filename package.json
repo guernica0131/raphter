@@ -26,7 +26,7 @@
   "scripts": {
     "debug": "node debug app.js",
     "prestart": "npm install",
-    "start": "node app.js"
+    "start": "forever start app.js"
   },
   "main": "app.js",
   "repository": {
