@@ -70,9 +70,9 @@ hooks:
 #   in the script specified in "location" starting from the root of the 
 #   revision's file bundle.
 hooks:
- BeforeInstall:
-    - location: deploy_hooks/before_install.sh
-      runas: root
+ #BeforeInstall:
+ #   - location: deploy_hooks/before_install.sh
+ #     runas: root
  ApplicationStart:
     - location:  deploy_hooks/application_start.sh   
       runas: root
