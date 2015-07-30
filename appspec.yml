@@ -42,6 +42,11 @@ permissions:
     mode: 4755
     type:
       - file
+  - object: /home/ubuntu/raphter/package.json
+    owner: root
+    mode: 464
+    type:
+      - file
 # If you are not running any commands on the instance, then remove 
 #   the "hooks" section altogether. A blank or incomplete "hooks" section
 #   may cause associated deployments to fail.
