@@ -55,9 +55,9 @@ hooks:
   ApplicationStop:
     - location: deploy_hooks/application_stop.sh
       runas: root
-    - location: deploy_hooks/kill_process.sh
-      timeout: 1
-      runas: root
+  #  - location: deploy_hooks/kill_process.sh
+  #    timeout: 1
+  #    runas: root
 # For each deployment lifecycle event, specify multiple "location" entries 
 #   if you want to run multiple scripts during that event.
 # You can specify "timeout" as the number of seconds to wait until failing the deployment 
