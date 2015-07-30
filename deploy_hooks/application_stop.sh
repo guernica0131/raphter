@@ -1,1 +1,1 @@
-forever stop -s /home/ubuntu/raphter/app.js
+forever stopall
