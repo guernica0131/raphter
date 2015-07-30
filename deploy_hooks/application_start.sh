@@ -1,1 +1,1 @@
-npm start /home/ubuntu/raphter/
+sudo npm start /home/ubuntu/raphter/

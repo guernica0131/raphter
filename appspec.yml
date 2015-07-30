@@ -38,15 +38,13 @@ files:
 permissions:
   - object: /home/ubuntu/raphter/deploy_hooks
     pattern: "*.sh"
-    owner: root
+    owner: ubuntu
     mode: 4755
     type:
       - file
-  - object: /home/ubuntu/raphter/package.json
-    owner: root
+  - object: /home/ubuntu/raphter/
+    owner: ubuntu
     mode: 464
-    type:
-      - file
 # If you are not running any commands on the instance, then remove 
 #   the "hooks" section altogether. A blank or incomplete "hooks" section
 #   may cause associated deployments to fail.
@@ -80,4 +78,4 @@ hooks:
  #     runas: root
  ApplicationStart:
     - location:  deploy_hooks/application_start.sh   
-      runas: root
+      runas: ubuntu
