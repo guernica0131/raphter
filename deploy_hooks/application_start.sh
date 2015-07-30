@@ -1,1 +1,1 @@
-sails lift ../app.js
+npm start ../app.js
