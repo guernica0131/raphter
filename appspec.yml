@@ -85,6 +85,6 @@ hooks:
  #BeforeInstall:
  #   - location: deploy_hooks/before_install.sh
  #     runas: root
-  ApplicationStart:
-    - location:  deploy_hooks/application_start.sh   
-      runas: ubuntu
+   ApplicationStart:
+     - location:  deploy_hooks/application_start.sh   
+       runas: ubuntu
