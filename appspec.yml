@@ -54,7 +54,7 @@ permissions:
 hooks:
   ApplicationStop:
     - location: deploy_hooks/application_stop.sh
-      runas: ubuntu
+      runas: root
     - location: deploy_hooks/kill_process.sh
       timeout: 1
       runas: root
@@ -87,4 +87,4 @@ hooks:
  #     runas: root
   ApplicationStart:
     - location: deploy_hooks/application_start.sh   
-      runas: ubuntu
+      runas: root
