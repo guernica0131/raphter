@@ -1,1 +1,1 @@
-npm start ../
+npm start /home/ubuntu/raphter/
