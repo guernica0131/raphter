@@ -24,7 +24,7 @@ os: linux
 #   may cause associated deployments to fail.
 files:
   - source: /
-    destination: /home/ubuntu/rapther
+    destination: /home/ubuntu/raphter
 # For deployments to Amazon Linux, Ubuntu Server, or RHEL instances,
 #   you can specify a "permissions" 
 #   section here that describes special permissions to apply to the files 
@@ -36,7 +36,7 @@ files:
 #   "permissions" section altogether. A blank or incomplete "permissions"
 #   section may cause associated deployments to fail.
 permissions:
-  - object: /home/ubuntu/rapther/deploy_hooks
+  - object: /home/ubuntu/raphter/deploy_hooks
     pattern: "*.sh"
     owner: root
     mode: 4755

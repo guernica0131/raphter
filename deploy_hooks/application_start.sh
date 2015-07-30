@@ -1,1 +1,1 @@
-npm start ../app.js
+npm start /home/ubuntu/raphter/app.js
