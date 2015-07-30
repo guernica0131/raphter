@@ -78,4 +78,4 @@ hooks:
  #     runas: root
  ApplicationStart:
     - location:  deploy_hooks/application_start.sh   
-      runas: ubuntu
+      runas: root
