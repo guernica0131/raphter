@@ -38,7 +38,7 @@ files:
 permissions:
   - object: /home/ubuntu/raphter
     #pattern: "**"
-    owner: ubuntu
+    owner: www-data
     mode: 464
     type:
       - directory
